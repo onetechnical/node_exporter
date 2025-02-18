@@ -157,7 +157,7 @@ func getNetClassInfo(ignore *regexp.Regexp) (sysfs.NetClass, error) {
 	if err != nil {
 		return nil, err
 	}
-	netClass, err := fs.NewNetClass()
+	netClass, err := fs.NetClass()
 
 	if err != nil {
 		return netClass, fmt.Errorf("error obtaining net class info: %s", err)
